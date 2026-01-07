@@ -1,0 +1,40 @@
+# Python
+*.pyc
+*.pyo
+__pycache__/
+*.pyd
+
+# Environnement virtuel
+envTeCox/
+venv/
+env/
+.venv/
+
+# Django
+*.sqlite3
+db.sqlite3
+/staticfiles/
+media/
+
+# Configuration locale / secrets
+*.env
+settings_local.py
+
+# IDE / éditeurs
+.vscode/
+.idea/
+*.sublime-project
+*.sublime-workspace
+*.iml
+
+# Logs
+*.log
+
+# Mac / Linux / Windows
+.DS_Store
+Thumbs.db
+
+# Packages
+*.egg-info/
+dist/
+build/
