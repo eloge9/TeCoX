@@ -13,11 +13,11 @@
       {% include "./navbar.html" %}
       <div
         class="absolute bottom-0 left-0 flex w-full items-center justify-between space-x-5 self-end p-5 lg:static lg:w-auto lg:self-center lg:p-0">
-        <a href="signup.html"
+        <a href="{% url 'accounts:signin' %}"
           class="bg-primary font-heading hover:bg-primary/90 w-full rounded-sm px-6 py-3 text-center whitespace-nowrap text-white lg:w-auto">
           Se connecter
         </a>
-        <a href="signup.html"
+        <a href="{% url 'accounts:signup' %}"
           class="font-heading w-full rounded-sm bg-[#222C40] px-6 py-3 text-center whitespace-nowrap text-white hover:bg-[#222C40]/90 lg:w-auto">
           S'inscrire
         </a>
