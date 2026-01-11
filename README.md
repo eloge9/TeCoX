@@ -18,3 +18,4 @@ Les utilisateurs peuvent consulter des pages publiques, créer et commenter des 
 
 ## Auteur
 Éloge GOMINA
+Mario d'ALMEIDA

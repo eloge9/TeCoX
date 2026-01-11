@@ -1,0 +1,103 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block content %}
+<section id="petition" class="pt-28 pb-24 sm:pt-36 lg:pt-[170px] lg:pb-[120px]">
+    <div class="px-4 xl:container">
+        <!-- Section Title -->
+        <div class="wow fadeInUp relative mx-auto mb-12 max-w-[620px] pt-6 text-center md:mb-20 lg:pt-16"
+            data-wow-delay=".2s">
+            <span class="title"> PÉTITION </span>
+            <h2
+                class="font-heading text-dark mb-5 text-3xl font-semibold sm:text-4xl md:text-[50px] md:leading-[60px] dark:text-white">
+                Lançons Ensemble TeCoX !
+            </h2>
+            <p class="text-dark-text text-base">
+                Soutenez la création d'une communauté d'innovation technologique ouverte à tous. Votre signature est la première pierre de cet édifice.
+            </p>
+        </div>
+
+        <!-- Signature Count and Manifesto -->
+        <div class="wow fadeInUp mx-auto max-w-[780px] text-center" data-wow-delay=".3s">
+            <div class="mb-12">
+                <h3 class="font-heading text-primary mb-2 text-2xl font-bold dark:text-white">
+                    {{ signature_count }}
+                </h3>
+                <p class="text-dark-text text-lg">personnes ont déjà signé. Rejoignez-nous !</p>
+            </div>
+            <div class="text-dark-text mb-12 text-left text-base">
+                <h4 class="font-heading text-dark mb-4 text-xl font-semibold dark:text-white">Notre Vision :</h4>
+                <p class="mb-4">
+                    Notre région regorge de talents, mais les opportunités de se connecter, d'apprendre et de créer ensemble sont encore trop rares. 
+                    TeCoX a pour ambition de changer cela en devenant le point de rencontre pour tous les esprits créatifs et techniques.
+                </p>
+                <ul class="list-disc pl-5 space-y-2">
+                    <li><strong>Apprendre et se former</strong> : à travers des ateliers pratiques, des formations et des partages d'expérience.</li>
+                    <li><strong>Créer et innover</strong> : en collaborant sur des projets open-source concrets et ambitieux.</li>
+                    <li><strong>Connecter et échanger</strong> : en organisant des rencontres, des conférences et des événements pour bâtir un réseau solide.</li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- Petition Form -->
+        <div class="mx-auto max-w-[780px]">
+            <!-- Display Success Messages -->
+            {% if messages %}
+                <div class="mb-8 text-center">
+                    {% for message in messages %}
+                        <div class="wow fadeInUp rounded-sm bg-green-200 p-4 text-green-800" data-wow-delay=".2s">
+                            {{ message }}
+                        </div>
+                    {% endfor %}
+                </div>
+            {% endif %}
+
+            <form class="wow fadeInUp" data-wow-delay=".2s" action="{% url 'petition:petition' %}" method="POST">
+                {% csrf_token %}
+                <div class="-mx-4 flex flex-wrap">
+                    <!-- Nom Complet Field -->
+                    <div class="w-full px-4 sm:w-1/2">
+                        <div class="mb-12">
+                            <label for="{{ form.nom_complet.id_for_label }}" class="font-heading text-dark mb-3 block text-base dark:text-white">
+                                {{ form.nom_complet.label }}
+                            </label>
+                            <input type="text" name="{{ form.nom_complet.name }}" id="{{ form.nom_complet.id_for_label }}" placeholder="{{ form.nom_complet.field.widget.attrs.placeholder }}"
+                                class="text-dark placeholder-dark-text focus:border-primary w-full border-b bg-transparent py-5 text-base font-medium outline-hidden dark:border-[#2C3443] dark:text-white dark:focus:border-white" />
+                            {{ form.nom_complet.errors }}
+                        </div>
+                    </div>
+                    <!-- Email Field -->
+                    <div class="w-full px-4 sm:w-1/2">
+                        <div class="mb-12">
+                            <label for="{{ form.email.id_for_label }}" class="font-heading text-dark mb-3 block text-base dark:text-white">
+                                {{ form.email.label }}
+                            </label>
+                            <input type="email" name="{{ form.email.name }}" id="{{ form.email.id_for_label }}" placeholder="{{ form.email.field.widget.attrs.placeholder }}"
+                                class="text-dark placeholder-dark-text focus:border-primary w-full border-b bg-transparent py-5 text-base font-medium outline-hidden dark:border-[#2C3443] dark:text-white dark:focus:border-white" />
+                            {{ form.email.errors }}
+                        </div>
+                    </div>
+                    <!-- Domaine d'intérêt Field -->
+                    <div class="w-full px-4">
+                        <div class="mb-12">
+                            <label for="{{ form.domaine_d_interet.id_for_label }}" class="font-heading text-dark mb-3 block text-base dark:text-white">
+                                {{ form.domaine_d_interet.label }}
+                            </label>
+                            <input type="text" name="{{ form.domaine_d_interet.name }}" id="{{ form.domaine_d_interet.id_for_label }}" placeholder="{{ form.domaine_d_interet.field.widget.attrs.placeholder }}"
+                                class="text-dark placeholder-dark-text focus:border-primary w-full border-b bg-transparent py-5 text-base font-medium outline-hidden dark:border-[#2C3443] dark:text-white dark:focus:border-white" />
+                            {{ form.domaine_d_interet.errors }}
+                        </div>
+                    </div>
+                    <!-- Submit Button -->
+                    <div class="w-full px-4">
+                        <button
+                            class="bg-primary font-heading hover:bg-primary/90 flex w-full items-center justify-center rounded-sm px-8 py-[14px] text-base text-white">
+                            Je soutiens le projet et je signe la pétition
+                        </button>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+</section>
+{% endblock %}

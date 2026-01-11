@@ -45,6 +45,7 @@ INSTALLED_APPS = [
     'events',
     'dashboard',
     'pages',
+    'petition',#Application pour la gestion des pétitions 
 ]
 
 MIDDLEWARE = [
