@@ -39,6 +39,10 @@
                 </svg>
               </span>
             </a>
+            <a href="{% url 'petition:petition' %}"
+              class="bg-primary font-heading hover:bg-primary/90 inline-flex items-center rounded-sm px-6 py-[10px] text-base text-white md:px-8 md:py-[14px] mx-4"> <!-- Added mx-4 for spacing -->
+              Signer la Pétition
+            </a>
             <a href="#about"
               class="font-heading text-dark hover:text-primary dark:hover:text-primary inline-flex items-center rounded-sm px-8 py-[14px] text-base dark:text-white">
               <span class="pr-3">
@@ -383,22 +387,13 @@
               <div class="max-w-[565px] lg:ml-auto">
                 <h2
                   class="font-heading text-dark mb-8 text-2xl font-bold sm:text-[40px] sm:leading-[50px] dark:text-white">
-                  Nous sommes une agence digitale créative basée aux USA
+                  L'histoire de notre communauté
                 </h2>
                 <p class="text-dark-text mb-6 text-base">
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                  Fusce condimentum sapien ac leo cursus dignissim. In ac
-                  lectus vel orci accumsan ultricies at in libero accumsan.
-                </p>
-                <p class="text-dark-text mb-6 text-base">
-                  Phasellus ex massa, facilisis ac vestibulum eget, ultrices
-                  quis nulla. Integer vitae magna lacus. Sed venenatis
-                  auctor dolor.
+                  L'aventure TeCoX est née d'une étincelle : la vision partagée de ses fondateurs de créer un écosystème où la passion pour la technologie et l'innovation ne connaîtrait pas de limites. Ce qui a commencé comme une simple conversation entre amis a rapidement évolué pour devenir un noyau de créateurs, de développeurs et de penseurs.
                 </p>
                 <p class="text-dark-text text-base">
-                  Phasellus ex massa, facilisis ac vestibulum eget, ultrices
-                  quis nulla. Integer vitae magna lacus. Sed venenatis
-                  auctor dolor.
+                  Aujourd'hui, TeCoX est une communauté florissante, bâtie sur des fondations de curiosité, d'entraide et une volonté commune de repousser les frontières du possible.
                 </p>
               </div>
             </div>
@@ -420,14 +415,10 @@
               <div class="max-w-[565px] lg:ml-auto">
                 <h2
                   class="font-heading text-dark mb-8 text-2xl font-bold sm:text-[40px] sm:leading-[50px] dark:text-white">
-                  Notre Mission pour votre succès
+                  Apprendre, Créer, Innover, Ensemble.
                 </h2>
                 <p class="text-dark-text mb-6 text-base">
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                  Fusce condimentum sapien ac leo cursus dignissim.
-                </p>
-                <p class="text-dark-text mb-6 text-base">
-                  Phasellus ex massa, facilisis ac vestibulum eget, ultrices quis nulla.
+                  Au cœur de TeCoX se trouve l'action. Notre mission est de transformer les idées en projets concrets et de démocratiser l'accès à la connaissance technique. Nous organisons des ateliers pratiques, développons collectivement des solutions open-source, animons des conférences sur les technologies émergentes et encourageons chaque membre à devenir à la fois mentor et apprenti.
                 </p>
               </div>
             </div>
@@ -449,9 +440,7 @@
                   Notre Vision de l'avenir numérique
                 </h2>
                 <p class="text-dark-text mb-6 text-base">
-                  Phasellus ex massa, facilisis ac vestibulum eget, ultrices
-                  quis nulla. Integer vitae magna lacus. Sed venenatis
-                  auctor dolor.
+                  Notre vision est de bâtir un avenir numérique inclusif et innovant, où la technologie est un levier de progrès pour tous. Nous aspirons à être un acteur clé dans la formation des talents, le développement de solutions éthiques et l'émergence d'une nouvelle génération de leaders et de créateurs. TeCoX se positionne comme le carrefour des idées qui façonneront le monde de demain, en favorisant l'échange, l'expérimentation et l'excellence.
                 </p>
               </div>
             </div>
@@ -463,161 +452,215 @@
 </section>
 <!-- ===== About Section End ===== -->
 
+<!-- ===== Testimonials Section Start ===== -->
+<section id="testimonials" class="pt-14 sm:pt-20 lg:pt-[130px]">
+  <div class="px-4 xl:container">
+    <div class="wow fadeInUp relative mx-auto mb-12 pt-6 text-center md:mb-20 lg:pt-16" data-wow-delay=".2s">
+      <span class="title"> TÉMOIGNAGES </span>
+      <h2
+        class="font-heading text-dark mx-auto mb-5 max-w-[620px] text-3xl font-semibold sm:text-4xl md:text-[50px] md:leading-[60px] dark:text-white">
+        Ce que nos membres en disent
+      </h2>
+    </div>
+
+    <div class="-mx-4 flex flex-wrap justify-center">
+        <div class="w-full px-4 md:w-1/2 lg:w-5/12">
+            <div class="mb-10 text-center">
+                <p class="text-dark-text mb-6 text-base italic dark:text-white">
+                    "Grâce à TeCoX, j'ai pu monter en compétence sur des technologies que je ne maîtrisais pas. L'ambiance d'entraide est incroyable et les projets sont vraiment stimulants."
+                </p>
+                <h4 class="font-heading text-dark text-lg font-medium dark:text-white">AGBEDIGNI Ameyo Claire</h4>
+            </div>
+        </div>
+        <div class="w-full px-4 md:w-1/2 lg:w-5/12">
+            <div class="mb-10 text-center">
+                <p class="text-dark-text mb-6 text-base italic dark:text-white">
+                    "TeCoX m'a ouvert les portes d'un réseau de professionnels passionnés. C'est l'endroit idéal pour échanger des idées, recevoir des feedbacks constructifs et faire avancer sa carrière."
+                </p>
+                <h4 class="font-heading text-dark text-lg font-medium dark:text-white">AGBETOSSOU Kodjo Désiré</h4>
+            </div>
+        </div>
+    </div>
+  </div>
+</section>
+<!-- ===== Testimonials Section End ===== -->
+
+
+
 <!-- ===== Team Section Start ===== -->
 <section id="team" class="pt-14 sm:pt-20 lg:pt-[130px]">
   <div class="px-4 xl:container">
     <div class="wow fadeInUp relative mx-auto mb-12 pt-6 text-center md:mb-20 lg:pt-16" data-wow-delay=".2s">
-      <span class="title"> NOTRE ÉQUIPE </span>
+      <span class="title"> LES CRÉATEURS </span>
       <h2
         class="font-heading text-dark mx-auto mb-5 max-w-[620px] text-3xl font-semibold sm:text-4xl md:text-[50px] md:leading-[60px] dark:text-white">
-        Rencontrez notre équipe créative et dévouée
+        Rencontrez les fondateurs de la communauté
       </h2>
-      <p class="text-dark-text mx-auto max-w-[620px] text-base">
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit. In
-        convallis tortor eros. Donec vitae tortor lacus. Phasellus aliquam
-        ante in maximus.
-      </p>
     </div>
 
     <div class="-mx-4 flex flex-wrap justify-center">
-      <div class="w-full px-4 md:w-1/2 lg:w-1/4">
-        <div class="wow fadeInUp xs:max-w-[370px] group mx-auto mb-10 max-w-[300px] text-center" data-wow-delay=".2s">
-          <div class="relative mb-8 overflow-hidden rounded-sm">
-            <img src="{% static 'images/team/image-1.jpg' %}" alt="photo de l'équipe" class="w-full" />
-            <div
-              class="absolute bottom-6 left-1/2 -translate-x-1/2 translate-y-10 opacity-0 transition duration-300 group-hover:translate-y-0 group-hover:opacity-100">
-              <div class="flex items-center justify-center space-x-3">
-                <a href="javascript:void(0)" name="social-icon" aria-label="social-icon"
-                  class="hover:bg-primary flex h-10 w-10 items-center justify-center rounded-full border border-white/10 bg-white/10 text-white backdrop-blur-sm transition hover:border-transparent">
-                  <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path
-                      d="M11.6667 11.2501H13.75L14.5834 7.91675H11.6667V6.25008C11.6667 5.39175 11.6667 4.58341 13.3334 4.58341H14.5834V1.78341C14.3117 1.74758 13.2859 1.66675 12.2025 1.66675C9.94004 1.66675 8.33337 3.04758 8.33337 5.58341V7.91675H5.83337V11.2501H8.33337V18.3334H11.6667V11.2501Z"
-                      fill="white" />
-                  </svg>
-                </a>
-                <a href="javascript:void(0)" name="social-icon" aria-label="social-icon"
-                  class="hover:bg-primary flex h-10 w-10 items-center justify-center rounded-full border border-white/10 bg-white/10 text-white backdrop-blur-sm transition hover:border-transparent">
-                  <svg width="22" height="22" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path fill-rule="evenodd" clip-rule="evenodd"
-                      d="M13.9831 19.25L9.82094 13.3176L4.61058 19.25H2.40625L8.843 11.9233L2.40625 2.75H8.06572L11.9884 8.34127L16.9034 2.75H19.1077L12.9697 9.73737L19.6425 19.25H13.9831ZM16.4378 17.5775H14.9538L5.56249 4.42252H7.04674L10.808 9.6899L11.4584 10.6039L16.4378 17.5775Z"
-                      fill="currentColor" />
-                  </svg>
-                </a>
-                <a href="javascript:void(0)" name="social-icon" aria-label="social-icon"
-                  class="hover:bg-primary flex h-10 w-10 items-center justify-center rounded-full border border-white/10 bg-white/10 text-white backdrop-blur-sm transition hover:border-transparent">
-                  <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path
-                      d="M5.78328 4.16677C5.78306 4.6088 5.60726 5.03263 5.29454 5.34504C4.98182 5.65744 4.55781 5.83282 4.11578 5.8326C3.67376 5.83238 3.24992 5.65657 2.93752 5.34386C2.62511 5.03114 2.44973 4.60713 2.44995 4.1651C2.45017 3.72307 2.62598 3.29924 2.9387 2.98683C3.25141 2.67443 3.67542 2.49905 4.11745 2.49927C4.55948 2.49949 4.98331 2.6753 5.29572 2.98801C5.60812 3.30073 5.78351 3.72474 5.78328 4.16677ZM5.83328 7.06677H2.49995V17.5001H5.83328V7.06677ZM11.1 7.06677H7.78328V17.5001H11.0666V12.0251C11.0666 8.9751 15.0416 8.69177 15.0416 12.0251V17.5001H18.3333V10.8918C18.3333 5.7501 12.45 5.94177 11.0666 8.46677L11.1 7.06677Z"
-                      fill="white" />
-                  </svg>
-                </a>
-              </div>
+        <!-- Membre 1: GOMINA Essowe Eloge -->
+        <div class="w-full px-4 md:w-1/2 lg:w-1/2">
+          <div class="wow fadeInUp group mx-auto mb-10 max-w-[300px] text-center" data-wow-delay=".2s">
+            <div class="relative mb-8 overflow-hidden rounded-sm">
+              <img src="{% static 'images/team/creator-gomina.svg' %}" alt="Photo de GOMINA Essowe Eloge" class="w-full" />
+            </div>
+            <div>
+              <h3 class="font-heading text-dark mb-1 text-xl font-medium sm:text-2xl dark:text-white">
+                GOMINA Essowe Eloge
+              </h3>
+              <p class="font-heading text-dark-text text-base">
+                Fondateur
+              </p>
+              <p class="font-heading text-dark-text text-base">
+                Contact: <a href="tel:+22891271004" class="hover:underline">+228 91-27-10-04</a>
+              </p>
+              <p class="font-heading text-dark-text text-base">
+                Email: <a href="mailto:gominaeloge@gmail.com" class="hover:underline">gominaeloge@gmail.com</a>
+              </p>
             </div>
           </div>
-          <div>
-            <h3 class="font-heading text-dark mb-1 text-xl font-medium sm:text-2xl dark:text-white">
-              Olivia Andrium
-            </h3>
-            <p class="font-heading text-dark-text text-base">
-              Chef de projet
-            </p>
-          </div>
         </div>
-      </div>
 
-      <div class="w-full px-4 md:w-1/2 lg:w-1/4">
-        <div class="wow fadeInUp xs:max-w-[370px] group mx-auto mb-10 max-w-[300px] text-center" data-wow-delay=".25s">
-          <div class="relative mb-8 overflow-hidden rounded-sm">
-            <img src="{% static 'images/team/image-2.jpg' %}" alt="photo de l'équipe" class="w-full" />
-            <div
-              class="absolute bottom-6 left-1/2 -translate-x-1/2 translate-y-10 opacity-0 transition duration-300 group-hover:translate-y-0 group-hover:opacity-100">
-              <div class="flex items-center justify-center space-x-3">
-                <a href="javascript:void(0)" name="social-icon" aria-label="social-icon"
-                  class="hover:bg-primary flex h-10 w-10 items-center justify-center rounded-full border border-white/10 bg-white/10 text-white backdrop-blur-sm transition hover:border-transparent hover:opacity-100">
-                  <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path
-                      d="M11.6667 11.2501H13.75L14.5834 7.91675H11.6667V6.25008C11.6667 5.39175 11.6667 4.58341 13.3334 4.58341H14.5834V1.78341C14.3117 1.74758 13.2859 1.66675 12.2025 1.66675C9.94004 1.66675 8.33337 3.04758 8.33337 5.58341V7.91675H5.83337V11.2501H8.33337V18.3334H11.6667V11.2501Z"
-                      fill="white" />
-                  </svg>
-                </a>
-                <a href="javascript:void(0)" name="social-icon" aria-label="social-icon"
-                  class="hover:bg-primary flex h-10 w-10 items-center justify-center rounded-full border border-white/10 bg-white/10 text-white backdrop-blur-sm transition hover:border-transparent hover:opacity-100">
-                  <svg width="22" height="22" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path fill-rule="evenodd" clip-rule="evenodd"
-                      d="M13.9831 19.25L9.82094 13.3176L4.61058 19.25H2.40625L8.843 11.9233L2.40625 2.75H8.06572L11.9884 8.34127L16.9034 2.75H19.1077L12.9697 9.73737L19.6425 19.25H13.9831ZM16.4378 17.5775H14.9538L5.56249 4.42252H7.04674L10.808 9.6899L11.4584 10.6039L16.4378 17.5775Z"
-                      fill="currentColor" />
-                  </svg>
-                </a>
-                <a href="javascript:void(0)" name="social-icon" aria-label="social-icon"
-                  class="hover:bg-primary flex h-10 w-10 items-center justify-center rounded-full border border-white/10 bg-white/10 text-white backdrop-blur-sm transition hover:border-transparent hover:opacity-100">
-                  <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path
-                      d="M5.78328 4.16677C5.78306 4.6088 5.60726 5.03263 5.29454 5.34504C4.98182 5.65744 4.55781 5.83282 4.11578 5.8326C3.67376 5.83238 3.24992 5.65657 2.93752 5.34386C2.62511 5.03114 2.44973 4.60713 2.44995 4.1651C2.45017 3.72307 2.62598 3.29924 2.9387 2.98683C3.25141 2.67443 3.67542 2.49905 4.11745 2.49927C4.55948 2.49949 4.98331 2.6753 5.29572 2.98801C5.60812 3.30073 5.78351 3.72474 5.78328 4.16677ZM5.83328 7.06677H2.49995V17.5001H5.83328V7.06677ZM11.1 7.06677H7.78328V17.5001H11.0666V12.0251C11.0666 8.9751 15.0416 8.69177 15.0416 12.0251V17.5001H18.3333V10.8918C18.3333 5.7501 12.45 5.94177 11.0666 8.46677L11.1 7.06677Z"
-                      fill="white" />
-                  </svg>
-                </a>
-              </div>
+        <!-- Membre 2: ALMEIDA Mario-Francisco M.N. -->
+        <div class="w-full px-4 md:w-1/2 lg:w-1/2">
+          <div class="wow fadeInUp group mx-auto mb-10 max-w-[300px] text-center" data-wow-delay=".25s">
+            <div class="relative mb-8 overflow-hidden rounded-sm">
+              <img src="{% static 'images/team/creator-almeida.svg' %}" alt="Photo de ALMEIDA Mario-F" class="w-full" />
+            </div>
+            <div>
+              <h3 class="font-heading text-dark mb-1 text-xl font-medium sm:text-2xl dark:text-white">
+                d'ALMEIDA Mario-F
+              </h3>
+              <p class="font-heading text-dark-text text-base">
+                Co-Fondateur
+              </p>
+              <p class="font-heading text-dark-text text-base">
+                Contact: <a href="tel:+22891826267" class="hover:underline">+228 91-82-62-67</a>
+              </p>
+              <p class="font-heading text-dark-text text-base">
+                Email: <a href="mailto:mariodalmeida24@gmail.com" class="hover:underline">mariodalmeida24@gmail.com</a>
+              </p>
             </div>
           </div>
-          <div>
-            <h3 class="font-heading text-dark mb-1 text-xl font-medium sm:text-2xl dark:text-white">
-              Jemse Kemorun
-            </h3>
-            <p class="font-heading text-dark-text text-base">
-              Designer de projet
-            </p>
-          </div>
         </div>
-      </div>
 
-      <div class="w-full px-4 md:w-1/2 lg:w-1/4">
-        <div class="wow fadeInUp xs:max-w-[370px] group mx-auto mb-10 max-w-[300px] text-center" data-wow-delay=".3s">
-          <div class="relative mb-8 overflow-hidden rounded-sm">
-            <img src="{% static 'images/team/image-3.jpg' %}" alt="photo de l'équipe" class="w-full" />
-            <div
-              class="absolute bottom-6 left-1/2 -translate-x-1/2 translate-y-10 opacity-0 transition duration-300 group-hover:translate-y-0 group-hover:opacity-100">
-              <div class="flex items-center justify-center space-x-3">
-                <a href="javascript:void(0)" name="social-icon" aria-label="social-icon"
-                  class="hover:bg-primary flex h-10 w-10 items-center justify-center rounded-full border border-white/10 bg-white/10 text-white backdrop-blur-sm transition hover:border-transparent hover:opacity-100">
-                  <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path
-                      d="M11.6667 11.2501H13.75L14.5834 7.91675H11.6667V6.25008C11.6667 5.39175 11.6667 4.58341 13.3334 4.58341H14.5834V1.78341C14.3117 1.74758 13.2859 1.66675 12.2025 1.66675C9.94004 1.66675 8.33337 3.04758 8.33337 5.58341V7.91675H5.83337V11.2501H8.33337V18.3334H11.6667V11.2501Z"
-                      fill="white" />
-                  </svg>
-                </a>
-                <a href="javascript:void(0)" name="social-icon" aria-label="social-icon"
-                  class="hover:bg-primary flex h-10 w-10 items-center justify-center rounded-full border border-white/10 bg-white/10 text-white backdrop-blur-sm transition hover:border-transparent hover:opacity-100">
-                  <svg width="22" height="22" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path fill-rule="evenodd" clip-rule="evenodd"
-                      d="M13.9831 19.25L9.82094 13.3176L4.61058 19.25H2.40625L8.843 11.9233L2.40625 2.75H8.06572L11.9884 8.34127L16.9034 2.75H19.1077L12.9697 9.73737L19.6425 19.25H13.9831ZM16.4378 17.5775H14.9538L5.56249 4.42252H7.04674L10.808 9.6899L11.4584 10.6039L16.4378 17.5775Z"
-                      fill="currentColor" />
-                  </svg>
-                </a>
-                <a href="javascript:void(0)" name="social-icon" aria-label="social-icon"
-                  class="hover:bg-primary flex h-10 w-10 items-center justify-center rounded-full border border-white/10 bg-white/10 text-white backdrop-blur-sm transition hover:border-transparent hover:opacity-100">
-                  <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path
-                      d="M5.78328 4.16677C5.78306 4.6088 5.60726 5.03263 5.29454 5.34504C4.98182 5.65744 4.55781 5.83282 4.11578 5.8326C3.67376 5.83238 3.24992 5.65657 2.93752 5.34386C2.62511 5.03114 2.44973 4.60713 2.44995 4.1651C2.45017 3.72307 2.62598 3.29924 2.9387 2.98683C3.25141 2.67443 3.67542 2.49905 4.11745 2.49927C4.55948 2.49949 4.98331 2.6753 5.29572 2.98801C5.60812 3.30073 5.78351 3.72474 5.78328 4.16677ZM5.83328 7.06677H2.49995V17.5001H5.83328V7.06677ZM11.1 7.06677H7.78328V17.5001H11.0666V12.0251C11.0666 8.9751 15.0416 8.69177 15.0416 12.0251V17.5001H18.3333V10.8918C18.3333 5.7501 12.45 5.94177 11.0666 8.46677L11.1 7.06677Z"
-                      fill="white" />
-                  </svg>
-                </a>
-              </div>
+        <!-- Membre 3: AGBETOSSOU K. Désiré -->
+        <div class="w-full px-4 md:w-1/2 lg:w-1/2">
+          <div class="wow fadeInUp group mx-auto mb-10 max-w-[300px] text-center" data-wow-delay=".25s">
+            <div class="relative mb-8 overflow-hidden rounded-sm">
+              <img src="{% static 'images/team/creator-agbetossou.svg' %}" alt="Photo de AGBETOSSOU" class="w-full" />
+            </div>
+            <div>
+              <h3 class="font-heading text-dark mb-1 text-xl font-medium sm:text-2xl dark:text-white">
+                AGBETOSSOU K. Désiré
+              </h3>
+              <p class="font-heading text-dark-text text-base">
+                Co-Fondateur
+              </p>
+              <p class="font-heading text-dark-text text-base">
+                Contact: <a href="tel:+22898172284" class="hover:underline">+228 98-17-22-84</a>
+              </p>
+              <p class="font-heading text-dark-text text-base">
+                Email: <a href="mailto:erdis0338@gmail.com" class="hover:underline">erdis0338@gmail.com</a>
+              </p>
             </div>
           </div>
-          <div>
-            <h3 class="font-heading text-dark mb-1 text-xl font-medium sm:text-2xl dark:text-white">
-              Avi Pestarica
-            </h3>
-            <p class="font-heading text-dark-text text-base">
-              Web Designer
-            </p>
+        </div>
+
+        <!-- Membre 4: AGBEDIGNI A. Claire -->
+        <div class="w-full px-4 md:w-1/2 lg:w-1/2">
+          <div class="wow fadeInUp group mx-auto mb-10 max-w-[300px] text-center" data-wow-delay=".25s">
+            <div class="relative mb-8 overflow-hidden rounded-sm">
+              <img src="{% static 'images/team/creator-agbedigni.svg' %}" alt="Photo de AGBEDIGNI A. Claire" class="w-full" />
+            </div>
+            <div>
+              <h3 class="font-heading text-dark mb-1 text-xl font-medium sm:text-2xl dark:text-white">
+                AGBEDIGNI A. Claire
+              </h3>
+              <p class="font-heading text-dark-text text-base">
+                Co-Fondateur
+              </p>
+              <p class="font-heading text-dark-text text-base">
+                Contact: <a href="tel:+22893730912" class="hover:underline">+228 93-73-09-12</a>
+              </p>
+              <p class="font-heading text-dark-text text-base">
+                Email: <a href="mailto:agbedigniclaire@gmail.com" class="hover:underline">agbedigniclaire@gmail.com</a>
+              </p>
+            </div>
           </div>
         </div>
-      </div>
     </div>
   </div>
 </section>
 <!-- ===== Team Section End ===== -->
+
+<!-- ===== Members Section Start ===== -->
+<section id="members" class="pt-14 sm:pt-20 lg:pt-[130px]">
+  <div class="px-4 xl:container">
+    <div class="wow fadeInUp relative mx-auto mb-12 pt-6 text-center md:mb-20 lg:pt-16" data-wow-delay=".2s">
+      <span class="title"> LES MEMBRES </span>
+      <h2
+        class="font-heading text-dark mx-auto mb-5 max-w-[620px] text-3xl font-semibold sm:text-4xl md:text-[50px] md:leading-[60px] dark:text-white">
+        Rencontrez les membres de la communauté
+      </h2>
+    </div>
+
+    <div class="-mx-4 flex flex-wrap justify-center">
+        <!-- Member 1 -->
+        <div class="w-full px-4 md:w-1/2 lg:w-1/3">
+          <div class="wow fadeInUp group mx-auto mb-10 max-w-[300px] text-center" data-wow-delay=".2s">
+            <div class="relative mb-8 overflow-hidden rounded-sm">
+              <img src="{% static 'images/team/member-1.svg' %}" alt="Photo du membre" class="w-full" />
+            </div>
+            <div>
+              <h3 class="font-heading text-dark mb-1 text-xl font-medium sm:text-2xl dark:text-white">
+                Nom du Membre
+              </h3>
+              <p class="font-heading text-dark-text text-base">
+                Rôle
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Member 2 -->
+        <div class="w-full px-4 md:w-1/2 lg:w-1/3">
+          <div class="wow fadeInUp group mx-auto mb-10 max-w-[300px] text-center" data-wow-delay=".25s">
+            <div class="relative mb-8 overflow-hidden rounded-sm">
+              <img src="{% static 'images/team/member-2.svg' %}" alt="Photo du membre" class="w-full" />
+            </div>
+            <div>
+              <h3 class="font-heading text-dark mb-1 text-xl font-medium sm:text-2xl dark:text-white">
+                Nom du Membre
+              </h3>
+              <p class="font-heading text-dark-text text-base">
+                Rôle
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Member 3 -->
+        <div class="w-full px-4 md:w-1/2 lg:w-1/3">
+          <div class="wow fadeInUp group mx-auto mb-10 max-w-[300px] text-center" data-wow-delay=".25s">
+            <div class="relative mb-8 overflow-hidden rounded-sm">
+              <img src="{% static 'images/team/member-3.svg' %}" alt="Photo du membre" class="w-full" />
+            </div>
+            <div>
+              <h3 class="font-heading text-dark mb-1 text-xl font-medium sm:text-2xl dark:text-white">
+                Nom du Membre
+              </h3>
+              <p class="font-heading text-dark-text text-base">
+                Rôle
+              </p>
+            </div>
+          </div>
+        </div>
+    </div>
+  </div>
+</section>
+<!-- ===== Members Section End ===== -->
 
 <!-- ===== Blog Section Start ===== -->
 <section id="blog" class="pt-14 sm:pt-20 lg:pt-[130px]">
@@ -821,7 +864,7 @@
                 Numéro de téléphone
               </h3>
               <p class="text-dark-text text-base font-medium">
-                +009 8754 3433 223
+                +228 96 55 55 55
               </p>
             </div>
           </div>
@@ -831,7 +874,7 @@
                 Adresse du bureau
               </h3>
               <p class="text-dark-text text-base font-medium">
-                76/A, Green Valley, Californie, USA.
+                Lomé, Togo
               </p>
             </div>
           </div>
@@ -935,6 +978,27 @@
       data-wow-delay=".2s">
       <div
         class="bg-noise-pattern absolute top-0 left-0 -z-10 h-full w-full bg-cover bg-center opacity-10 dark:opacity-40">
+      </div>
+      <div class="absolute top-0 right-0 -z-10">
+        <svg width="1356" height="860" viewBox="0 0 1356 860" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <g opacity="0.5" filter="url(#filter0_f_201_2181)">
+            <rect x="450.088" y="-126.709" width="351.515" height="944.108" transform="rotate(-34.6784 450.088 -126.709)"
+              fill="url(#paint0_linear_201_2181)" />
+          </g>
+          <defs>
+            <filter id="filter0_f_201_2181" x="0.0878906" y="-776.711" width="1726.24" height="1876.4"
+              filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+              <feFlood flood-opacity="0" result="BackgroundImageFix" />
+              <feBlend mode="normal" in="SourceGraphic" in2="BackgroundImageFix" result="shape" />
+              <feGaussianBlur stdDeviation="225" result="effect1_foregroundBlur_201_2181" />
+            </filter>
+            <linearGradient id="paint0_linear_201_2181" x1="417.412" y1="59.4717" x2="966.334" y2="603.857"
+              gradientUnits="userSpaceOnUse">
+              <stop stop-color="#ABBCFF" />
+              <stop offset="0.859375" stop-color="#4A6CF7" />
+            </linearGradient>
+          </defs>
+        </svg>
       </div>
       <div class="absolute bottom-0 left-1/2 -z-10 -translate-x-1/2">
         <svg width="1215" height="259" viewBox="0 0 1215 259" fill="none" xmlns="http://www.w3.org/2000/svg">

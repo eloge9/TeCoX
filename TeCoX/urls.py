@@ -24,4 +24,5 @@ urlpatterns = [
     path('dashboard/', include('dashboard.urls')),
     path('events/', include('events.urls')),
     path('posts/', include('posts.urls')),
+    path('petition/', include('petition.urls')),
 ]
