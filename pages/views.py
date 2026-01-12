@@ -10,4 +10,4 @@ def events(request):
     return render(request, 'pages/events.html')
 
 def poste(request):
-    return render(request, 'pages/poste.html')
+    return render(request   , 'pages/poste.html')

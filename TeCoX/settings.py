@@ -17,6 +17,8 @@ try:
     from .settings_local import *
 except ImportError:
     pass
+# indique à Django d'utiliser ton modèle User custom
+AUTH_USER_MODEL = 'accounts.User'
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
@@ -75,9 +77,6 @@ TEMPLATES = [
 ]
 
 WSGI_APPLICATION = 'TeCoX.wsgi.application'
-
-
-
 
 
 # Password validation
