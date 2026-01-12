@@ -15,7 +15,7 @@
           Fonctionnalités
         </a>
       </li>
-      <li class="submenu-item group relative">
+      <!-- <li class="submenu-item group relative">
         <a href="javascript:void(0)"
           class="submenu-taggler font-heading text-dark-text hover:text-primary inline-flex items-center justify-center text-center text-base dark:hover:text-white">
           Pages
@@ -58,7 +58,7 @@
             </a>
           </li>
         </ul>
-      </li>
+      </li> -->
       <li>
         <a href="#support"
           class="menu-scroll font-heading text-dark-text hover:text-primary inline-flex items-center justify-center text-center text-base dark:hover:text-white">
@@ -68,3 +68,30 @@
     </ul>
   </nav>
 </div>
+<script>
+  document.addEventListener("DOMContentLoaded", () => {
+    const sections = document.querySelectorAll("section[id]");
+    const navLinks = document.querySelectorAll(".navbar a[href^='#']");
+
+    function activateMenu() {
+      let scrollY = window.pageYOffset;
+
+      sections.forEach(section => {
+        const sectionTop = section.offsetTop - 120;
+        const sectionHeight = section.offsetHeight;
+        const sectionId = section.getAttribute("id");
+
+        if (scrollY >= sectionTop && scrollY < sectionTop + sectionHeight) {
+          navLinks.forEach(link => {
+            link.classList.remove("active");
+            if (link.getAttribute("href") === `#${sectionId}`) {
+              link.classList.add("active");
+            }
+          });
+        }
+      });
+    }
+
+    window.addEventListener("scroll", activateMenu);
+  });
+</script>
