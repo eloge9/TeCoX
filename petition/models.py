@@ -6,7 +6,7 @@ class Petition(models.Model):
     nom = models.CharField(max_length=200, verbose_name="Nom complet")
     prenom = models.CharField(max_length=200, verbose_name="Nom complet")
     telephone = models.CharField(max_length=20, verbose_name="Numéro de téléphone")
-    email = models.EmailField(unique=True, verbose_name = "Adresse email")
+    email = models.EmailField(verbose_name = "Adresse email", blank=True, null=True)
     domaine_d_interet = models.CharField(max_length = 200, blank = True, null = True, verbose_name = "Domaine d'interêt")
     created_at = models.DateTimeField(auto_now_add=True, verbose_name="Date de création")
 
@@ -17,7 +17,7 @@ class Petition(models.Model):
         (4, "4 - Bon"),
         (5, "5 - Excellent"),
     ]
-    niveau_soutien = models.IntegerField(choices=NOTE_CHOICES, verbose_name="Niveau de soutien")
+    niveau_soutien = models.IntegerField(choices=NOTE_CHOICES, verbose_name="Niveau de soutien", null=True, blank=True)
 
     commentaire = models.TextField(blank=True, verbose_name="Commentaire")
     signature = models.ImageField(

@@ -72,3 +72,21 @@ class PetitionForm(forms.ModelForm):
             "class": "form-control"
         })
     )
+
+    def clean_email(self):
+        email = self.cleaned_data.get("email")
+
+        if email:
+            if Petition.objects.filter(email=email).exists():
+                raise forms.ValidationError("Cet email a déjà signé la pétition.")
+
+        return email
+
+    def clean_telephone(self):
+        telephone = self.cleaned_data.get("telephone")
+
+        if telephone:
+            if Petition.objects.filter(telephone=telephone).exists():
+                raise forms.ValidationError("Ce numéro de téléphone a déjà signé la pétition.")
+
+        return telephone

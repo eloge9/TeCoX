@@ -1,25 +1,36 @@
 from django.shortcuts import render, redirect
-from django.contrib import messages
 from .forms import PetitionForm
 from .models import Petition
-# Create your views here.
+import base64
+from django.core.files.base import ContentFile
 
+def liste_petitions(request):
 
-
+    petitions = Petition.objects.all().order_by('-created_at')
+    return render(request, 'petition/liste_petitions.html', {'petitions': petitions})
 
 def petition_view(request):
+    if request.method == "POST":
+        form = PetitionForm(request.POST)
 
-    # Si  le formulaire est soumis (method = POST)
-    if request.method == 'POST':
-        form = PetitionForm(request.POST) # On crée une instance du formulaire avec les données envoyées 
-        if form.is_valid(): #Je vérifie si les données sont valides (par ex, si l'email est bien un mail)
-            form.save() # Si c'est valide, on enregistre directement  dans la base de données 
-            messages.success(request, 'Merci pour votre signature ! Votre soutien est précieux. ! ')
-            return redirect('petition:petition') # Redirige vers la même page pour éviter la double soumission
+        if form.is_valid():
+            petition = form.save(commit=False)
+            signature_base64 = request.POST.get("signature_base64")
 
-    else: 
-        form = PetitionForm() # 
+            if signature_base64:
+                format, imgstr = signature_base64.split(";base64,")
+                ext = format.split("/")[-1]
+                file = ContentFile(base64.b64decode(imgstr), name=f"signature.{ext}")
+                petition.signature = file
 
+            if not petition.niveau_soutien:
+                petition.niveau_soutien = None
+
+            petition.save()
+            return redirect("petition:petition")
+
+    else:
+        form = PetitionForm()
 
     signature_count = Petition.objects.count()
 
@@ -27,5 +38,6 @@ def petition_view(request):
         'form': form,
         'signature_count': signature_count
     }
-    
-    return render(request, 'petition/petition.html', context)
+
+    return render(request, "petition/petition.html", context)
+
