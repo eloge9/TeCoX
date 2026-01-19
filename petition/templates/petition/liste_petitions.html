@@ -1,5 +1,4 @@
 {% load static %}
-
 <!DOCTYPE html>
 <html lang="fr">
 
@@ -8,9 +7,9 @@
   <meta name="description" content="Tecox - Liste des signatures de la pétition">
   <meta property="og:title" content="Tecox - Liste des signatures">
   <meta property="og:type" content="website">
-
   <title>Liste des signatures</title>
   <style>
+    /* Styles pour l'écran */
     body {
       font-family: Arial, sans-serif;
       background-color: #ffffff;
@@ -22,6 +21,7 @@
       text-align: center;
       color: #007BFF;
       margin-bottom: 20px;
+      font-size: 22px;
     }
 
     table {
@@ -29,19 +29,22 @@
       border-collapse: collapse;
       margin-top: 20px;
       table-layout: fixed;
+      font-size: 11px;
     }
 
     th,
     td {
       border: 1px solid #555;
-      padding: 8px;
+      padding: 6px 4px;
       text-align: left;
       word-wrap: break-word;
+      overflow: hidden;
     }
 
     th {
       background-color: #007BFF;
       color: white;
+      font-size: 10px;
     }
 
     tr:nth-child(even) {
@@ -49,14 +52,14 @@
     }
 
     td img.signature {
-      max-width: 150px;
-      max-height: 80px;
+      max-width: 80px;
+      max-height: 50px;
       border: 1px solid #ccc;
       border-radius: 4px;
     }
 
     button {
-      margin-top: 20px;
+      margin: 20px auto;
       padding: 10px 20px;
       background-color: #007BFF;
       color: white;
@@ -64,15 +67,142 @@
       cursor: pointer;
       border-radius: 5px;
       font-size: 16px;
+      display: block;
     }
 
     button:hover {
       background-color: #0056b3;
     }
 
+    .header-logo {
+      text-align: center;
+      margin-bottom: 15px;
+    }
+
+    .header-logo img {
+      max-height: 40px;
+      width: auto;
+    }
+
+    /* Largeurs de colonnes optimisées pour A4 */
+    th:nth-child(1),
+    td:nth-child(1) {
+      width: 3%;
+    }
+
+    /* N° */
+    th:nth-child(2),
+    td:nth-child(2) {
+      width: 9%;
+    }
+
+    /* Nom */
+    th:nth-child(3),
+    td:nth-child(3) {
+      width: 9%;
+    }
+
+    /* Prénom */
+    th:nth-child(4),
+    td:nth-child(4) {
+      width: 12%;
+    }
+
+    /* Email */
+    th:nth-child(5),
+    td:nth-child(5) {
+      width: 8%;
+    }
+
+    /* Téléphone */
+    th:nth-child(6),
+    td:nth-child(6) {
+      width: 10%;
+    }
+
+    /* Domaine */
+    th:nth-child(7),
+    td:nth-child(7) {
+      width: 8%;
+    }
+
+    /* Niveau */
+    th:nth-child(8),
+    td:nth-child(8) {
+      width: 15%;
+    }
+
+    /* Commentaire */
+    th:nth-child(9),
+    td:nth-child(9) {
+      width: 12%;
+    }
+
+    /* Signature */
+    th:nth-child(10),
+    td:nth-child(10) {
+      width: 9%;
+    }
+
+    /* Date */
+
+    /* Styles pour l'impression A4 */
     @media print {
+      @page {
+        size: A4;
+        margin: 10mm;
+      }
+
+      body {
+        margin: 0;
+        padding: 0;
+        font-size: 9pt;
+      }
+
+      h1 {
+        font-size: 16pt;
+        margin-bottom: 10px;
+      }
+
+      .header-logo img {
+        max-height: 30px;
+      }
+
+      table {
+        font-size: 8pt;
+        page-break-inside: auto;
+      }
+
+      tr {
+        page-break-inside: avoid;
+        page-break-after: auto;
+      }
+
+      th {
+        font-size: 8pt;
+        padding: 4px 3px;
+      }
+
+      td {
+        padding: 4px 3px;
+      }
+
+      td img.signature {
+        max-width: 60px;
+        max-height: 40px;
+      }
+
       button {
         display: none;
+      }
+
+      /* Éviter les coupures de page au milieu des lignes */
+      thead {
+        display: table-header-group;
+      }
+
+      tbody {
+        display: table-row-group;
       }
     }
   </style>
@@ -80,11 +210,11 @@
 
 <body>
   <header>
-    <img src="{% static 'images/logo/logo-dark.png' %}" alt="logo" class="hidden h-[50px] dark:block" width="200" />
+    <div class="header-logo">
+      <img src="{% static 'images/logo/logo-dark.png' %}" alt="logo" />
+    </div>
     <h1>Liste des signatures de la pétition Tech Community eXperience</h1>
   </header>
-
-
   <table>
     <thead>
       <tr>
@@ -94,10 +224,10 @@
         <th>Email</th>
         <th>Téléphone</th>
         <th>Domaine</th>
-        <th>Niveau de soutien</th>
+        <th>Niveau</th>
         <th>Commentaire</th>
         <th>Signature</th>
-        <th>Date de signature</th>
+        <th>Date</th>
       </tr>
     </thead>
     <tbody>
@@ -115,22 +245,19 @@
           {% if p.signature %}
           <img src="{{ p.signature.url }}" alt="Signature de {{ p.nom }}" class="signature" />
           {% else %}
-          Pas de signature
+          -
           {% endif %}
         </td>
         <td>{{ p.created_at|date:"d/m/Y H:i" }}</td>
       </tr>
       {% empty %}
       <tr>
-        <td colspan="9" style="text-align:center;">Aucune signature pour le moment.</td>
+        <td colspan="10" style="text-align:center;">Aucune signature pour le moment.</td>
       </tr>
       {% endfor %}
     </tbody>
   </table>
-
-  <div style="text-align:center;">
-    <button onclick="window.print()">Imprimer / Sauvegarder en PDF</button>
-  </div>
+  <button onclick="window.print()">Imprimer / Sauvegarder en PDF</button>
 </body>
 
 </html>
