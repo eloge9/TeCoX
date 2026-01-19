@@ -36,7 +36,7 @@ def petition_view(request):
 
     context = {
         'form': form,
-        'signature_count': signature_count
+        'signature_count': signature_count,
     }
 
     return render(request, "petition/petition.html", context)
